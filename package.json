@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tinalai/webpack-demo#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^2.21.0",
     "webpack": "^1.13.1"
   }
 }
