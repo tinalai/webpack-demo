@@ -40,4 +40,4 @@ exports.devServer = function(options) {
       })
     ]
   };
-}
+};
