@@ -31,11 +31,15 @@ var config;
 // Detect how npm is run and branch based on that
 switch(process.env.npm_lifecycle_event) {
   case 'build':
-    config = merge(common, {});
+    config = merge(
+      common,
+      parts.setupCSS(PATHS.app)
+    );
     break;
   default:
     config = merge(
       common,
+      parts.setupCSS(PATHS.app),
       parts.devServer({
         // Customize host/port here if needed
         host: process.env.HOST,
