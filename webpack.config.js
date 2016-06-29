@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const validate = require('webpack-validator');
 const parts = require('./libs/parts');
+const pkg = require('./package.json');
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -13,7 +14,8 @@ const common = {
   // Entry accepts a path or an object of entries.
   // The latter form is more covenient with more complex configurations.
   entry: {
-    app: PATHS.app
+    app: PATHS.app,
+    vendor: Object.keys(pkg.dependencies)
   },
   output: {
     path: PATHS.build,
