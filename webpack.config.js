@@ -13,7 +13,8 @@ const common = {
   // Entry accepts a path or an object of entries.
   // The latter form is more covenient with more complex configurations.
   entry: {
-    app: PATHS.app
+    app: PATHS.app,
+    vendor: ['react']
   },
   output: {
     path: PATHS.build,
