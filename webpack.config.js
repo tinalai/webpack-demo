@@ -13,8 +13,7 @@ const common = {
   // Entry accepts a path or an object of entries.
   // The latter form is more covenient with more complex configurations.
   entry: {
-    app: PATHS.app,
-    vendor: ['react']
+    app: PATHS.app
   },
   output: {
     path: PATHS.build,
@@ -41,6 +40,10 @@ switch(process.env.npm_lifecycle_event) {
         'process.env.NODE_ENV',
         'production'
       ),
+      parts.extractBundle({
+        name: 'vendor',
+        entries: ['react']
+      }),
       parts.minify(),
       parts.setupCSS(PATHS.app)
     );
