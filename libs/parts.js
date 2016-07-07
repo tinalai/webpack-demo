@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 exports.devServer = function(options) {
   return {
@@ -113,6 +114,18 @@ exports.extractBundle = function(options) {
       // needed for reliable caching.
       new webpack.optimize.CommonsChunkPlugin({
         names: [options.name, 'manifest']
+      })
+    ]
+  };
+};
+
+exports.clean = function(path) {
+  return {
+    plugins: [
+      new CleanWebpackPlugin([path], {
+        // Without `root` CleanWebpackPlugin won't point to our
+        // project and will fail to work.
+        root: process.cwd()
       })
     ]
   };
