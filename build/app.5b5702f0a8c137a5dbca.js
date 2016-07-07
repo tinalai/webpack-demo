@@ -1,0 +1,2 @@
+webpackJsonp([0,2],[function(n,e,o){var t=o(1);o(2),o(6),document.body.appendChild(t())},function(n,e){n.exports=function(){var n=document.createElement("h1");return n.innerHTML="the world sees you!",n}},function(n,e){}]);
+//# sourceMappingURL=app.5b5702f0a8c137a5dbca.js.map
