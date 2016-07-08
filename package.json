@@ -4,6 +4,7 @@
   "description": "Demo project base on [Survivejs.com - Webpack](http://survivejs.com/webpack/developing-with-webpack/getting-started/)",
   "main": "index.js",
   "scripts": {
+    "stats": "webpack --profile --json > stats.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "webpack"
